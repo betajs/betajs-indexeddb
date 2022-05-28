@@ -1,0 +1,84 @@
+{
+    "homepage": "https://betajs.com",
+    "license": "Apache-2.0",
+    "licenses": [
+        {
+            "type": "Apache-2.0",
+            "url": "https://github.com/betajs/betajs-indexeddb/blob/master/LICENSE"
+        }
+    ],
+    "author": {
+        "name": "BetaJS",
+        "email": "info@betajs.com"
+    },
+    "bugs": {
+        "url": "https://github.com/betajs/betajs-indexeddb/issues"
+    },
+    "name": "betajs-indexeddb",
+    "version": "0.0.1",
+    "description": "BetaJS-IndexedDB is an IndexedDB wrapper for BetaJS.",
+    "contributors": [
+        "Oliver Friedmann",
+        "Natasha Calleia"
+    ],
+    "devDependencies": {
+        "lodash": "",
+        "qunitjs": "^2.4.1",
+        "grunt": "",
+        "grunt-contrib-jshint": "",
+        "grunt-contrib-concat": "",
+        "grunt-contrib-uglify": "^4.0.0",
+        "grunt-contrib-clean": "",
+        "grunt-preprocess": "",
+        "grunt-closure-tools": "",
+        "grunt-jsdoc": "",
+        "grunt-shell": "",
+        "grunt-template": "",
+        "grunt-githooks": "",
+        "grunt-contrib-connect": "",
+        "grunt-betajs-docs-compile": "",
+        "betajs-scoped": "~0.0.13",
+        "betajs-compile": "~0.0.28",
+        "js-beautify": ""
+    },
+    "scripts": {
+        "test": "grunt check-node",
+        "relink": "npm link betajs && npm link betajs-compile && npm link betajs-scoped && npm link betajs-data",
+        "reinstall": "rm -f package-lock.json && rm -rf node_modules && npm i && npm run relink"
+    },
+    "dependencies": {
+        "betajs": "~1.0.96",
+        "betajs-data": "~1.0.41"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/betajs/betajs-indexeddb.git"
+    },
+    "main": "dist/betajs-indexeddb.js",
+    "meta": {
+        "blog": "https://blog.betajs.com",
+        "twitter": "https://twitter.com/thebetajs",
+        "guid": "5bd48095-7aea-4962-b1d3-75a575bce453",
+        "installdoc": "docsrc/common/install.md",
+        "summarydoc": "docsrc/common/summary.md",
+        "badges": {
+            "codeclimate": true,
+            "travis": false,
+            "npm": true
+        },
+        "compatability": {},
+        "weakDependencies": {
+            "betajs-scoped": "https://github.com/betajs/betajs-scoped"
+        },
+        "dependencies": {
+            "betajs": "https://github.com/betajs/betajs",
+            "betajs-data": "https://github.com/betajs/betajs-data"
+        },
+        "cdn": {
+            "betajs-indexeddb.js": "http://cdn.rawgit.com/betajs/betajs-indexeddb/master/dist/betajs-indexeddb.js",
+            "betajs-indexeddb.min.js": "http://cdn.rawgit.com/betajs/betajs-indexeddb/master/dist/betajs-indexeddb.min.js",
+            "betajs-indexeddb-noscoped.js": "http://cdn.rawgit.com/betajs/betajs-indexeddb/master/dist/betajs-indexeddb-noscoped.js",
+            "betajs-indexeddb-noscoped.min.js": "http://cdn.rawgit.com/betajs/betajs-indexeddb/master/dist/betajs-indexeddb-noscoped.min.js"
+        }
+    }
+}
