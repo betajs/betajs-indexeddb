@@ -15,7 +15,7 @@
         "url": "https://github.com/betajs/betajs-indexeddb/issues"
     },
     "name": "betajs-indexeddb",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "BetaJS-IndexedDB is an IndexedDB wrapper for BetaJS.",
     "contributors": [
         "Oliver Friedmann",

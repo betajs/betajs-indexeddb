@@ -1,4 +1,4 @@
-# betajs-indexeddb 0.0.1
+# betajs-indexeddb 0.0.2
 [![Code Climate](https://codeclimate.com/github/betajs/betajs-indexeddb/badges/gpa.svg)](https://codeclimate.com/github/betajs/betajs-indexeddb)
 [![NPM](https://img.shields.io/npm/v/betajs-indexeddb.svg?style=flat)](https://www.npmjs.com/package/betajs-indexeddb)
 
@@ -17,7 +17,6 @@ You can use the library in the browser and compile it as well.
 ```javascript
 	<script src="betajs/dist/betajs.min.js"></script>
 	<script src="betajs-data/dist/betajs-data.min.js"></script>
-	<script src="https://unpkg.com/indexeddb@latest/dist/indexeddb.min.js"></script>
 	<script src="betajs-indexeddb/dist/betajs-indexeddb.min.js"></script>
 ``` 
 

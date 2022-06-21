@@ -1,5 +1,5 @@
 /*!
-betajs-indexeddb - v0.0.1 - 2022-06-01
+betajs-indexeddb - v0.0.2 - 2022-06-21
 Copyright (c) Oliver Friedmann,Natasha Calleia
 Apache-2.0 Software License.
 */
@@ -12,8 +12,8 @@ Scoped.binding('data', 'global:BetaJS.Data');
 Scoped.define("module:", function () {
 	return {
     "guid": "5bd48095-7aea-4962-b1d3-75a575bce453",
-    "version": "0.0.1",
-    "datetime": 1654126381929
+    "version": "0.0.2",
+    "datetime": 1655831261253
 };
 });
 Scoped.assumeVersion('base:version', '~1.0.96');
@@ -76,12 +76,8 @@ Scoped.define("module:IndexedDBDatabaseTable", [
                 if (!query[this.primary_key()]) return inherited._findOne.call(this, query);
                 var promise = Promise.create();
                 this.table().success(function(table) {
-                    console.log("query[this.primary_key()]", query[this.primary_key()]);
                     var request = table.get(query[this.primary_key()]);
                     request.onsuccess = function(event) {
-                        console.log("findOne success...");
-                        console.log("request:", request);
-                        console.log("event:", event);
                         promise.asyncSuccess(request.result);
                     };
                     request.onerror = function() {
@@ -94,7 +90,6 @@ Scoped.define("module:IndexedDBDatabaseTable", [
             _updateRow: function(query, row) {
                 var promise = Promise.create();
                 this.table("readwrite").success(function(table) {
-                    console.log("query[this.primary_key()]", query[this.primary_key()]);
                     var getRequest = table.get(query[this.primary_key()]);
                     getRequest.onsuccess = function() {
                         Objs.extend(row, getRequest.result);
@@ -154,8 +149,6 @@ Scoped.define("module:IndexedDBDatabaseTable", [
             },
 
             _find: function(query, options) {
-                console.log("finding... query:", query);
-                console.log("options", options);
                 var promise = Promise.create();
                 var originalQuery = query;
                 query = query || {};
